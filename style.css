@@ -188,7 +188,6 @@ main img {
 .image-carousel {
     background-color: var(--color-primary-hover);
     color: var(--color-text-primary);
-    /*padding: 2rem 0 0;*/
     margin-top: 1.5rem;
 }
 
@@ -200,11 +199,16 @@ main img {
 }
 
 .carousel-track {
-    display: inline-flex;
+    display: flex;
     gap: 1.5rem;
     align-items: center;
     width: max-content;
-    animation: carousel-scroll 18s linear infinite;
+    animation: carousel-scroll 24s linear infinite;
+    will-change: transform;
+}
+
+.carousel:hover .carousel-track {
+    animation-play-state: paused;
 }
 
 .carousel__item {
@@ -231,7 +235,7 @@ main img {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-50% - 0.75rem));
+        transform: translateX(calc(-50% + 0.75rem));
     }
 }
 
