@@ -2,38 +2,51 @@
 
 ## 📚 Sobre o Projeto
 
-Desenvolvimento do website da Biblioteca Virtual do Centro Universitário UniFECAF, uma plataforma que permite aos alunos acessar e visualizar acervo de livros online.
+Website estático para a Biblioteca Digital da UniFECAF, criado com HTML e CSS para apresentar o acervo, áreas de atendimento e recursos de forma clara, responsiva e acessível.
 
 ## 🎯 Objetivo
 
-Criar uma aplicação web responsiva e intuitiva seguindo protótipos de baixa fidelidade, com identidade visual alinhada aos padrões da UniFECAF.
+Entregar um protótipo de frontend funcional com:
+- navegação responsiva para desktop e mobile;
+- seção de apresentação da biblioteca;
+- carrossel de imagens em loop infinito;
+- seção de livros com cards;
+- seção de unidades com layout de imagem e texto.
 
 ## 🛠️ Tecnologias
 
-- **HTML5**: Estrutura semântica e acessibilidade
-- **CSS3**: Estilização responsiva e moderna
+- **HTML5**
+- **CSS3**
+- **CSS Variables** para tema e cores
+- **Design responsivo** com media queries
 
-## 📋 Escopo
+## ✅ Funcionalidades implementadas
 
-- [x] Análise de requisitos
-- [ ] Design visual
-- [ ] Desenvolvimento frontend
-- [ ] Testes e validação
-- [ ] Deploy
+- Cabeçalho fixo com menu responsivo e botão hamburger
+- Banner principal em destaque
+- Seção `Sobre nossa biblioteca` com três colunas
+- Carrossel infinito de imagens com espaçamento uniforme
+- Seção `Nossos livros` com 6 cards de conteúdo
+- Seção `Unidades` com imagens e descrições
+- Uso de variáveis CSS para facilitar a manutenção do tema
+- Texto justificado na seção sobre a biblioteca
 
-## 💡 Considerações do Mercado Web
+## 📂 Estrutura do projeto
 
-### Tendências Atuais
-- Aplicações web continuam em alta demanda
-- HTML e CSS formam a base essencial para UI/UX moderno
-- Desenvolvimento mobile-first é padrão indústria
-- Profissionais web seguem em crescimento, mesmo com IA, devido à demanda por expertise em user experience, acessibilidade e otimização
+- `index.html` — marcação semântica das seções
+- `style.css` — estilos globais, layout e responsividade
+- `images/` — imagens usadas no site
 
-### Paleta de Cores
-*A definir conforme identidade visual da UniFECAF*
+## 📌 Status atual
 
-## 👨‍💻 Autor
+- [x] Design visual aplicado
+- [x] Layout responsivo implementado
+- [x] Conteúdo de seções concluído
+- [ ] Ajustes finais de conteúdo e imagens reais
+- [ ] Publicação / deploy
 
-Desenvolvedor de Design Web - UniFECAF
+## 💡 Observações
+
+O projeto está pronto como protótipo estático. As próximas etapas recomendadas são a substituição das imagens de placeholder por conteúdos reais e a validação de acessibilidade com leitores de tela.
 
 ---
