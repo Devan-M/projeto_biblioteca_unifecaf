@@ -1,0 +1,166 @@
+/* RESET */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIÁVEIS */
+:root {
+    --bg-nav: #254ab9;
+    --active-bg: #6b7a8d;
+    --active-text: #ffffff;
+    --link-text: #cccccc;
+    --link-hover: #ffffff;
+    --hero-bg: #d6d6d6;
+    --footer-bg: #254ab9;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: #f0f0f0;
+    color: #333;
+}
+
+/* NAVBAR */
+header {
+    background-color: var(--bg-nav);
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    position: relative;
+}
+
+.logo img {
+    height: 30px;
+}
+
+/* MENU DESKTOP */
+nav {
+    display: flex;
+    gap: 1rem;
+    transition: all 0.4s ease;
+}
+
+nav a {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    color: var(--link-text);
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--link-hover);
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+}
+
+nav a.active {
+    background-color: var(--active-bg);
+    color: var(--active-text);
+    border-radius: 4px;
+}
+
+/* BANNER */
+main img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0px;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--footer-bg);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    color: #222;
+}
+
+/* ESCONDE CHECKBOX */
+#menu-toggle {
+    display: none;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger svg {
+    height: 2em;
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+    fill: none;
+    stroke: #f1faee;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    transition:
+        stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+    stroke-dasharray: 12 63;
+}
+
+/* ANIMAÇÃO */
+#menu-toggle:checked+.hamburger svg {
+    transform: rotate(-45deg);
+}
+
+#menu-toggle:checked+.hamburger svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+}
+
+/* RESPONSIVO */
+@media (max-width: 650px) {
+
+    /* MOSTRA BOTÃO */
+    .hamburger {
+        display: block;
+    }
+
+    /* ESCONDE MENU */
+    nav {
+        display: flex;
+        /* mantém sempre flex */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: var(--bg-nav);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 0;
+
+        /* ANIMAÇÃO */
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.4s ease;
+    }
+
+    /* MOSTRA MENU AO CLICAR */
+    #menu-toggle:checked~nav {
+        max-height: 300px;
+        /* altura suficiente pro menu */
+        opacity: 1;
+        padding: 20px 0;
+    }
+}
