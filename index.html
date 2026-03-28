@@ -26,8 +26,9 @@
     <input type="checkbox" id="menu-toggle">
 
     <!-- HAMBURGER SVG -->
-    <label for="menu-toggle" class="hamburger">
-      <svg viewBox="0 0 32 32">
+    <label for="menu-toggle" class="hamburger" aria-hidden="true">
+      <span class="sr-only">Abrir menu</span>
+      <svg viewBox="0 0 32 32" aria-hidden="true">
         <path class="line line-top-bottom"
           d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
         </path>
@@ -35,7 +36,7 @@
       </svg>
     </label>
 
-    <nav>
+    <nav id="site-navigation" aria-label="Menu principal">
       <a href="#" class="active">Biblioteca</a>
       <a href="#">Livros</a>
       <a href="#">Unidades</a>
@@ -44,9 +45,38 @@
   </header>
 
   <!-- BANNER -->
-  <main class="hero">
-    <img src="images/banner.jpg" alt="Imagem Banner">
+  <main class="hero" aria-label="Banner principal">
+    <img src="images/banner.jpg" alt="Imagem de capa da biblioteca">
   </main>
+
+  <!-- SOBRE NOSSA BIBLIOTECA -->
+  <section class="about-library" aria-labelledby="sobre-biblioteca">
+    <h2 id="sobre-biblioteca">Sobre nossa biblioteca</h2>
+    <div class="about-library__grid">
+      <div class="about-library__column about-library__column--text">
+        <p>A Biblioteca Digital da UNIFECAF oferece acesso a um acervo diversificado de livros, artigos e recursos digitais pensados para apoiar estudantes, professores e toda a comunidade acadêmica.</p>
+      </div>
+      <div class="about-library__column about-library__column--image">
+        <img src="images/banner.jpg" alt="Imagem da biblioteca">
+      </div>
+      <div class="about-library__column about-library__column--text">
+        <p>Nosso espaço reúne obras acadêmicas e literárias, além de material de referência atualizado. Estamos sempre buscando facilitar o acesso ao conhecimento, com uma plataforma moderna e segura.</p>
+      </div>
+    </div>
+    <div class="image-carousel" aria-label="Carrossel de imagens">
+      <div class="carousel">
+        <article class="carousel__item">
+          <img src="images/banner.jpg" alt="Interior da biblioteca">
+        </article>
+        <article class="carousel__item">
+          <img src="images/banner.jpg" alt="Estantes de livros da biblioteca">
+        </article>
+        <article class="carousel__item">
+          <img src="images/banner.jpg" alt="Área de estudo da biblioteca">
+        </article>
+      </div>
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer>
