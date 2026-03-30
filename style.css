@@ -149,6 +149,7 @@ main img {
     margin-bottom: 1.75rem;
     color: var(--color-white);
     text-align: left;
+    text-transform: uppercase;
 }
 
 .about-library__content,
@@ -260,6 +261,7 @@ main img {
     font-size: clamp(2rem, 2.25vw, 2.75rem);
     margin: 0;
     color: var(--color-white);
+    text-transform: uppercase;
 }
 
 .books-grid {
@@ -339,6 +341,7 @@ main img {
     margin: 0;
     color: var(--color-text-primary);
     text-align: left;
+    text-transform: uppercase;
 }
 
 .units-section__item {
