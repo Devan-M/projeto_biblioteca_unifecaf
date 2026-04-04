@@ -1,3 +1,15 @@
+/* Imagens menores e proporcionais para as unidades */
+.units-section__image img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    min-height: 180px;
+    box-shadow: var(--shadow);
+    display: block;
+    margin: 0 auto;
+}
 /* RESET */
 *,
 *::before,
@@ -113,6 +125,8 @@ nav a.active {
 
 .hero {
     flex: 1;
+    background-color: var(--color-primary-hover);
+}
 }
 
 main img {
@@ -127,7 +141,7 @@ main img {
 .secondary-banner {
     width: 100%;
     overflow: hidden;
-    background-color: var(--color-gray-100);
+    background-color: var(--color-primary-hover);
 }
 
 .secondary-banner img {
@@ -150,6 +164,9 @@ main img {
     color: var(--color-white);
     text-align: left;
     text-transform: uppercase;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about-library__content,
@@ -158,6 +175,8 @@ main img {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1rem;
     align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .about-library__item--text {
@@ -183,7 +202,7 @@ main img {
 .about-library__column--image img,
 .about-library__item--image img {
     width: 100%;
-    max-width: 520px;
+    max-width: 320px;
     border-radius: 18px;
     display: block;
     object-fit: cover;
@@ -194,6 +213,9 @@ main img {
     background-color: var(--color-primary-hover);
     color: var(--color-text-primary);
     margin-top: 1.5rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .carousel {
@@ -324,73 +346,95 @@ main img {
 }
 
 /* UNITS SECTION */
+.container-max-width {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .units-section {
     background-color: var(--color-white);
     color: var(--color-text-primary);
     padding: 3rem 2rem 3rem;
 }
 
-.units-section__header {
-    max-width: 1200px;
-    margin: 0 auto 2rem;
-}
+    /* Usar .container-max-width no HTML */
+
 
 .units-section__header h2 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(2rem, 2.25vw, 2.75rem);
     margin: 0;
-    color: var(--color-text-primary);
-    text-align: left;
+    /* Usar .container-max-width no HTML */
     text-transform: uppercase;
 }
 
 .units-section__item {
     display: grid;
-    grid-template-columns: 1fr 1.8fr;
-    gap: 1.75rem;
-    align-items: center;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    align-items: flex-start;
     margin-bottom: 2rem;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
+.units-section__image img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    min-height: 180px;
+    box-shadow: var(--shadow);
+    display: block;
+    margin: 0;
+}
+.units-section__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 0.5rem;
+    padding-left: 0;
+    height: 100%;
+}
 
 .units-section__item:last-child {
     margin-bottom: 0;
 }
-
-.units-section__image img {
-    width: 100%;
+    /* Usar .container-max-width no HTML */
+    /**width: 100%;
     border-radius: 20px;
     object-fit: cover;
-    min-height: 220px;
-    box-shadow: var(--shadow);
-}
+    margin-bottom: 2rem;
+    Usar .container-max-width no HTML
+    box-shadow: var(--shadow); **/
+
 
 .units-section__text h3 {
     font-size: 1.5rem;
-    margin: 0 0 1rem;
+    margin: 0 0 1rem 0;
     color: var(--color-text-primary);
+    text-align: left;
+    line-height: 1.2;
 }
-
 .units-section__text p {
     color: var(--color-text-secondary);
     line-height: 1.8;
     margin: 0;
+    text-align: left;
 }
 
 /* CONTACTS SECTION */
 .contacts-section {
     background-color: var(--color-primary-hover);
-    color: var(--color-white);
     padding: 3rem 2rem;
 }
 
 .contacts-section h2 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(2rem, 2.25vw, 2.75rem);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    /* Usar .container-max-width no HTML */
     color: var(--color-white);
     margin: 0 auto 2rem;
     max-width: 1200px;

@@ -19,48 +19,52 @@
 
   <!-- NAVBAR -->
   <header>
-    <div class="logo">
-      <img src="images/unifecaf_logo.png" alt="Logo da Biblioteca">
+    <div class="container-max-width" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+      <div class="logo">
+        <img src="images/unifecaf_logo.png" alt="Logo da Biblioteca">
+      </div>
+
+      <!-- CHECKBOX CONTROLE -->
+      <input type="checkbox" id="menu-toggle">
+
+      <!-- HAMBURGER SVG -->
+      <label for="menu-toggle" class="hamburger" aria-hidden="true">
+        <span class="sr-only">Abrir menu</span>
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path class="line line-top-bottom"
+            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+          </path>
+          <path class="line" d="M7 16 27 16"></path>
+        </svg>
+      </label>
+
+      <nav id="site-navigation" aria-label="Menu principal">
+        <a href="#sobre-biblioteca" class="active">Biblioteca</a>
+        <a href="#nossos-livros">Livros</a>
+        <a href="#unidades">Unidades</a>
+        <a href="#contatos">Contatos</a>
+      </nav>
     </div>
-
-    <!-- CHECKBOX CONTROLE -->
-    <input type="checkbox" id="menu-toggle">
-
-    <!-- HAMBURGER SVG -->
-    <label for="menu-toggle" class="hamburger" aria-hidden="true">
-      <span class="sr-only">Abrir menu</span>
-      <svg viewBox="0 0 32 32" aria-hidden="true">
-        <path class="line line-top-bottom"
-          d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
-        </path>
-        <path class="line" d="M7 16 27 16"></path>
-      </svg>
-    </label>
-
-    <nav id="site-navigation" aria-label="Menu principal">
-      <a href="#sobre-biblioteca" class="active">Biblioteca</a>
-      <a href="#nossos-livros">Livros</a>
-      <a href="#unidades">Unidades</a>
-      <a href="#contatos">Contatos</a>
-    </nav>
   </header>
 
   <!-- BANNER -->
   <main class="hero" aria-label="Banner principal">
-    <img src="images/banner.jpg" alt="Imagem de capa da biblioteca">
+    <div class="container-max-width">
+      <img src="images/banner.jpg" alt="Imagem de capa da biblioteca">
+    </div>
   </main>
 
   <!-- SOBRE NOSSA BIBLIOTECA -->
   <section class="about-library" aria-labelledby="sobre-biblioteca">
-    <h2 id="sobre-biblioteca">Sobre nossa biblioteca</h2>
-    <div class="about-library__content">
+    <h2 id="sobre-biblioteca" class="container-max-width">Nossa biblioteca</h2>
+    <div class="about-library__content container-max-width">
       <div class="about-library__item about-library__item--text">
         <p>A Biblioteca Digital da UNIFECAF disponibiliza um acervo amplo e diversificado, composto por livros, artigos
           e diversos recursos digitais, cuidadosamente selecionados para apoiar o aprendizado, a pesquisa e o
           desenvolvimento acadêmico de estudantes, professores e de toda a comunidade universitária.</p>
       </div>
       <div class="about-library__item about-library__item--image">
-        <img src="images/banner.jpg" alt="Imagem da biblioteca">
+        <img src="images/bib6.jpg" alt="Imagem da biblioteca">
       </div>
       <div class="about-library__item about-library__item--text">
         <p>Nosso espaço reúne um acervo abrangente de obras acadêmicas e literárias, além de materiais de referência
@@ -69,7 +73,7 @@
       </div>
     </div>
     <div class="image-carousel" aria-label="Carrossel de imagens">
-      <div class="carousel">
+      <div class="carousel container-max-width">
         <div class="carousel-track">
           <article class="carousel__item">
             <img src="images/bib1.jpg" alt="Interior da biblioteca">
@@ -114,15 +118,17 @@
 
   <!-- BANNER SECUNDÁRIO -->
   <section class="secondary-banner" aria-label="Banner secundário">
-    <img src="images/banner.jpg" alt="Banner secundário da biblioteca">
+    <div class="container-max-width">
+      <img src="images/banner.jpg" alt="Banner secundário da biblioteca">
+    </div>
   </section>
 
   <!-- NOSSOS LIVROS -->
   <section class="books-section" aria-labelledby="nossos-livros">
-    <div class="books-section__header">
+    <div class="books-section__header container-max-width">
       <h2 id="nossos-livros">Nossos livros</h2>
     </div>
-    <div class="books-grid">
+    <div class="books-grid container-max-width">
       <article class="book-card">
         <h3>Nome do Livro 1</h3>
         <img src="images/book1.jpg" alt="Capa do livro 1">
@@ -164,10 +170,10 @@
 
   <!-- UNIDADES -->
   <section class="units-section" aria-labelledby="unidades">
-    <div class="units-section__header">
+    <div class="units-section__header container-max-width">
       <h2 id="unidades">As unidades</h2>
     </div>
-    <div class="units-section__item">
+    <div class="units-section__item container-max-width">
       <div class="units-section__image">
         <img src="images/unidade1.jpg" alt="Unidade 1">
       </div>
@@ -177,7 +183,7 @@
           em obras acadêmicas.</p>
       </div>
     </div>
-    <div class="units-section__item">
+    <div class="units-section__item container-max-width">
       <div class="units-section__image">
         <img src="images/unidade2.jpg" alt="Unidade 2">
       </div>
@@ -187,7 +193,7 @@
           estudantes de pós-graduação.</p>
       </div>
     </div>
-    <div class="units-section__item">
+    <div class="units-section__item container-max-width">
       <div class="units-section__image">
         <img src="images/unidade3.jpg" alt="Unidade 3">
       </div>
@@ -201,8 +207,8 @@
 
   <!-- CONTATOS -->
   <section class="contacts-section" aria-labelledby="contatos">
-    <h2 id="contatos">Contatos</h2>
-    <div class="contacts-section__inner">
+    <h2 id="contatos" class="container-max-width">Contatos</h2>
+    <div class="contacts-section__inner container-max-width">
       <div class="contacts-section__texts">
         <p>Texto do primeiro bloco de contato. Adicione aqui o endereço, telefone, e-mail ou qualquer informação
           relevante para os visitantes da biblioteca.</p>
