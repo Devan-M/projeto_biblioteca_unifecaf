@@ -42,8 +42,8 @@ Entregar um protótipo de frontend funcional com:
 - [x] Design visual aplicado
 - [x] Layout responsivo implementado
 - [x] Conteúdo de seções concluído
-- [ ] Ajustes finais de conteúdo e imagens reais
-- [ ] Publicação / deploy
+- [x] Ajustes finais de conteúdo e imagens reais
+- [x] Publicação / deploy
 
 ## 💡 Observações
 
