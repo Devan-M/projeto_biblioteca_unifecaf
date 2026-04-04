@@ -1,16 +1,12 @@
-/* Imagens menores e proporcionais para as unidades */
-.units-section__image img {
-    max-width: 320px;
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-    object-fit: cover;
-    min-height: 180px;
-    box-shadow: var(--shadow);
-    display: block;
-    margin: 0 auto;
-}
-/* RESET */
+/* =============================================================
+   SISTEMA DE DESIGN — BIBLIOTECA UNIFECAF
+   Ordem: Reset → Tokens → Base → Utilitários → Navbar →
+          Banners → Seção Biblioteca → Carrossel → Livros →
+          Unidades → Contato → Footer → Hamburger →
+          Keyframes → Media Queries
+   ============================================================= */
+
+/* ---- 1. RESET ---- */
 *,
 *::before,
 *::after {
@@ -27,27 +23,43 @@ html {
     scroll-margin-top: 80px;
 }
 
-/* VARIÁVEIS */
+/* ---- 2. TOKENS DE DESIGN (VARIÁVEIS) ---- */
 :root {
-    --color-primary: #0057FF;
-    --color-primary-hover: #0039A6;
-    --color-primary-light: #EAF1FF;
-    --color-accent: #FFD400;
-    --color-white: #FFFFFF;
-    --color-gray-100: #F5F5F5;
-    --color-gray-200: #E0E0E0;
-    --color-text-primary: #000000;
+    /* Paleta */
+    --color-primary:        #0057FF;
+    --color-primary-hover:  #0039A6;
+    --color-primary-light:  #EAF1FF;
+    --color-accent:         #FFD400;
+    --color-white:          #FFFFFF;
+    --color-gray-100:       #F5F5F5;
+    --color-gray-200:       #E0E0E0;
+    --color-text-primary:   #000000;
     --color-text-secondary: #333333;
-    --color-text-muted: #666666;
-    --color-success: #28A745;
-    --color-warning: #FFC107;
-    --color-error: #DC3545;
-    --bg-page: var(--color-gray-100);
-    --bg-nav: var(--color-primary);
+    --color-text-muted:     #666666;
+    --color-success:        #28A745;
+    --color-warning:        #FFC107;
+    --color-error:          #DC3545;
+
+    /* Fundos semânticos */
+    --bg-page:   var(--color-gray-100);
+    --bg-nav:    var(--color-primary);
     --footer-bg: var(--color-primary-hover);
+
+    /* Efeitos */
     --shadow: 0 18px 50px rgba(15, 30, 70, 0.12);
+
+    /* Raios */
+    --radius-sm: 8px;
+    --radius-md: 18px;
+    --radius-lg: 24px;
+    --radius-xl: 999px;
+
+    /* Layout */
+    --max-width:  1200px;
+    --nav-height: 64px;
 }
 
+/* ---- 3. BASE ---- */
 body {
     min-height: 100vh;
     display: flex;
@@ -62,6 +74,14 @@ a {
     font: inherit;
 }
 
+/* ---- 4. UTILITÁRIOS ---- */
+.container-max-width {
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -74,20 +94,21 @@ a {
     border: 0;
 }
 
-/* NAVBAR */
+/* ---- 5. NAVBAR ---- */
 header {
     background-color: var(--bg-nav);
     padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 64px;
+    height: var(--nav-height);
     position: sticky;
     top: 0;
     z-index: 10;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
+.nav-logo img,
 .logo img {
     height: 34px;
 }
@@ -97,6 +118,8 @@ nav {
     gap: 1.25rem;
     align-items: center;
     transition: all 0.3s ease;
+    justify-content: flex-end;
+    padding-right: 3vw;
 }
 
 nav a {
@@ -106,7 +129,7 @@ nav a {
     font-size: 0.95rem;
     letter-spacing: 0.04em;
     color: var(--color-white);
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
@@ -123,99 +146,88 @@ nav a.active {
     color: var(--color-white);
 }
 
-.hero {
-    flex: 1;
+/* ---- 6. BANNER PRINCIPAL ---- */
+.banner-principal {
     background-color: var(--color-primary-hover);
 }
-}
 
-main img {
+.banner-principal .container-max-width img {
     display: block;
     width: 100%;
     max-height: 480px;
     object-fit: cover;
-    border-radius: 0;
+    border-radius: var(--radius-lg);
     box-shadow: var(--shadow);
 }
 
-.secondary-banner {
-    width: 100%;
-    overflow: hidden;
+/* ---- 7. BANNER SECUNDÁRIO ---- */
+.banner-secundario {
     background-color: var(--color-primary-hover);
 }
 
-.secondary-banner img {
+.banner-secundario .container-max-width img {
     display: block;
     width: 100%;
     max-height: 420px;
     object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
 }
 
-.about-library {
+/* ---- 8. SEÇÃO BIBLIOTECA ---- */
+.secao-biblioteca {
     background-color: var(--color-primary-hover);
     color: var(--color-white);
     padding: 3rem 1.5rem 2.5rem;
 }
 
-.about-library h2 {
+.secao-biblioteca h2 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(2rem, 2.25vw, 2.75rem);
     margin-bottom: 1.75rem;
     color: var(--color-white);
     text-align: left;
     text-transform: uppercase;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.about-library__content,
-.about-library__grid {
+.biblioteca-conteudo {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1rem;
     align-items: start;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
-.about-library__item--text {
+.biblioteca-texto {
     max-width: 520px;
     margin: 0 auto;
 }
 
-.about-library__column--text p,
-.about-library__item--text p {
+.biblioteca-texto p {
     color: var(--color-white);
     line-height: 1.8;
     font-size: 1rem;
     text-align: justify;
 }
 
-.about-library__column--image,
-.about-library__item--image {
+.biblioteca-imagem {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.about-library__column--image img,
-.about-library__item--image img {
+.biblioteca-imagem img {
     width: 100%;
     max-width: 320px;
-    border-radius: 18px;
+    border-radius: var(--radius-md);
     display: block;
     object-fit: cover;
     box-shadow: var(--shadow);
 }
 
-.image-carousel {
+/* ---- 9. CARROSSEL ---- */
+.biblioteca-carousel {
     background-color: var(--color-primary-hover);
-    color: var(--color-text-primary);
     margin-top: 1.5rem;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .carousel {
@@ -238,7 +250,7 @@ main img {
     animation-play-state: paused;
 }
 
-.carousel__item {
+.carousel-item {
     flex: 0 0 auto;
     width: auto;
     max-width: 340px;
@@ -248,7 +260,7 @@ main img {
     box-shadow: var(--shadow);
 }
 
-.carousel__item img {
+.carousel-item img {
     width: 100%;
     height: auto;
     max-width: 100%;
@@ -257,28 +269,18 @@ main img {
     display: block;
 }
 
-@keyframes carousel-scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-50% + 0.75rem));
-    }
-}
-
-/* BOOKS SECTION */
-.books-section {
+/* ---- 10. SEÇÃO LIVROS ---- */
+.secao-livros {
     background-color: var(--color-primary-hover);
     color: var(--color-white);
     padding: 3rem 1.5rem 2.5rem;
 }
 
-.books-section__header {
-    max-width: 1200px;
-    margin: 0 auto 2rem;
+.livros-header {
+    margin-bottom: 2rem;
 }
 
-.books-section__header h2 {
+.livros-header h2 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(2rem, 2.25vw, 2.75rem);
     margin: 0;
@@ -286,33 +288,38 @@ main img {
     text-transform: uppercase;
 }
 
-.books-grid {
+.livros-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(260px, 1fr));
     gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
-.book-card {
+.livro-card {
     background: var(--color-white);
-    border-radius: 24px;
+    border-radius: var(--radius-lg);
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     color: var(--color-text-primary);
+    box-shadow: var(--shadow);
 }
 
-.book-card h3 {
+.livro-card h3 {
     font-size: 1.1rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     margin: 0;
     text-align: center;
+    min-height: 2.6em;
+    line-height: 1.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.book-card img {
+.livro-card img {
     width: 100%;
     border-radius: 16px;
     object-fit: cover;
@@ -320,65 +327,66 @@ main img {
     background-color: var(--color-gray-200);
 }
 
-.book-card p {
+.livro-card p {
     font-size: 0.95rem;
     line-height: 1.7;
     margin: 0;
     color: var(--color-text-secondary);
+    flex: 1;
 }
 
-.book-card__button {
+.livro-card-botao {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    align-self: center;
     margin-top: auto;
-    padding: 0.95rem 1.25rem;
-    border-radius: 999px;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-xl);
     background-color: var(--color-primary);
     color: var(--color-white);
     text-decoration: none;
     font-weight: 700;
+    font-size: 0.9rem;
     transition: background-color 0.25s ease;
 }
 
-.book-card__button:hover {
+.livro-card-botao:hover {
     background-color: var(--color-primary-hover);
+    color: var(--color-white);
 }
 
-/* UNITS SECTION */
-.container-max-width {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.units-section {
+/* ---- 11. SEÇÃO UNIDADES ---- */
+.secao-unidades {
     background-color: var(--color-white);
     color: var(--color-text-primary);
-    padding: 3rem 2rem 3rem;
+    padding: 3rem 2rem;
 }
 
-    /* Usar .container-max-width no HTML */
+.unidades-header {
+    margin-bottom: 2rem;
+}
 
-
-.units-section__header h2 {
+.unidades-header h2 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(2rem, 2.25vw, 2.75rem);
     margin: 0;
-    /* Usar .container-max-width no HTML */
     text-transform: uppercase;
 }
 
-.units-section__item {
+.unidade-item {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 2rem;
     align-items: flex-start;
     margin-bottom: 2rem;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
 }
-.units-section__image img {
+
+.unidade-item:last-child {
+    margin-bottom: 0;
+}
+
+.unidade-imagem img {
     max-width: 320px;
     width: 100%;
     height: auto;
@@ -387,75 +395,63 @@ main img {
     min-height: 180px;
     box-shadow: var(--shadow);
     display: block;
-    margin: 0;
+    margin: 0 auto;
 }
-.units-section__text {
+
+.unidade-texto {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     padding-top: 0.5rem;
-    padding-left: 0;
     height: 100%;
 }
 
-.units-section__item:last-child {
-    margin-bottom: 0;
-}
-    /* Usar .container-max-width no HTML */
-    /**width: 100%;
-    border-radius: 20px;
-    object-fit: cover;
-    margin-bottom: 2rem;
-    Usar .container-max-width no HTML
-    box-shadow: var(--shadow); **/
-
-
-.units-section__text h3 {
+.unidade-texto h3 {
     font-size: 1.5rem;
     margin: 0 0 1rem 0;
     color: var(--color-text-primary);
-    text-align: left;
     line-height: 1.2;
 }
-.units-section__text p {
+
+.unidade-texto p {
     color: var(--color-text-secondary);
     line-height: 1.8;
     margin: 0;
-    text-align: left;
 }
 
-/* CONTACTS SECTION */
-.contacts-section {
+/* ---- 12. SEÇÃO CONTATO ---- */
+.secao-contato {
     background-color: var(--color-primary-hover);
+    color: var(--color-white);
     padding: 3rem 2rem;
 }
 
-.contacts-section h2 {
+.secao-contato h2 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(2rem, 2.25vw, 2.75rem);
-    /* Usar .container-max-width no HTML */
     color: var(--color-white);
     margin: 0 auto 2rem;
-    max-width: 1200px;
+    max-width: var(--max-width);
+    text-transform: uppercase;
 }
 
-.contacts-section__inner {
+.contato-inner {
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 2.5rem;
     align-items: start;
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 
-.contacts-section__texts {
+.contato-textos {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.contacts-section__texts p {
+.contato-textos p {
     font-size: 1rem;
     line-height: 1.8;
     color: var(--color-white);
@@ -463,11 +459,11 @@ main img {
     margin: 0;
 }
 
-.contacts-section__image {
+.contato-imagem {
     width: 300px;
 }
 
-.contacts-section__image img {
+.contato-imagem img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -476,62 +472,54 @@ main img {
     box-shadow: var(--shadow);
 }
 
-/* MEDIA QUERIES */
-@media (max-width: 1100px) {
-    .books-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+/* ---- 13. REDES SOCIAIS (seção contato) ---- */
+.social-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0 4px;
 }
 
-@media (max-width: 950px) {
-    .about-library__content {
-        grid-template-columns: 1fr;
-    }
-
-    .about-library__item--text {
-        max-width: none;
-    }
-
-    .about-library__item--image img {
-        max-width: 100%;
-    }
-
-    .units-section__item {
-        grid-template-columns: 1fr;
-    }
-
-    .contacts-section__inner {
-        grid-template-columns: 1fr;
-    }
-
-    .contacts-section__image {
-        width: 100%;
-    }
+.socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color: var(--color-primary-hover);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease;
+    flex-shrink: 0;
 }
 
-@media (max-width: 700px) {
-    .books-section {
-        padding: 2rem 1rem 2.5rem;
-    }
+.containerOne:hover  { background-color: #d62976; transform: scale(1.5); border-radius: 15px; }
+.containerTwo:hover  { background-color: #00acee; transform: scale(1.5); border-radius: 15px; }
+.containerThree:hover { background-color: #0072b1; transform: scale(1.5); border-radius: 15px; }
+.containerFour:hover  { background-color: #25d366; transform: scale(1.5); border-radius: 15px; }
 
-    .books-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-library {
-        padding: 2rem 1rem 2rem;
-    }
-
-    .units-section {
-        padding: 2rem 1rem 2rem;
-    }
-
-    .contacts-section {
-        padding: 2rem 1rem;
-    }
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: 0.3s;
 }
 
-/* FOOTER */
+.socialSvg {
+    width: 17px;
+}
+
+.socialSvg path {
+    fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+    0%   { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0);    opacity: 1; }
+}
+
+/* ---- 14. RODAPÉ ---- */
 footer {
     background-color: var(--footer-bg);
     display: flex;
@@ -542,7 +530,7 @@ footer {
     padding: 1rem 0;
 }
 
-/* HAMBURGER */
+/* ---- 14. MENU HAMBÚRGUER ---- */
 #menu-toggle {
     display: none;
 }
@@ -582,6 +570,72 @@ footer {
     stroke-dashoffset: -32.42;
 }
 
+/* ---- 15. KEYFRAMES ---- */
+@keyframes carousel-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% + 0.75rem)); }
+}
+
+/* ---- 16. MEDIA QUERIES ---- */
+
+/* Tablets grandes */
+@media (max-width: 1100px) {
+    .livros-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Tablets */
+@media (max-width: 950px) {
+    .biblioteca-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .biblioteca-texto {
+        max-width: none;
+    }
+
+    .biblioteca-imagem img {
+        max-width: 100%;
+    }
+
+    .unidade-item {
+        grid-template-columns: 1fr;
+    }
+
+    .contato-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .contato-imagem {
+        width: 100%;
+    }
+}
+
+/* Mobile grande */
+@media (max-width: 700px) {
+    .secao-livros {
+        padding: 2rem 1rem 2.5rem;
+    }
+
+    .livros-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .secao-biblioteca {
+        padding: 2rem 1rem 2rem;
+    }
+
+    .secao-unidades {
+        padding: 2rem 1rem;
+    }
+
+    .secao-contato {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Mobile — hamburger */
 @media (max-width: 650px) {
     header {
         padding: 0 1rem;
@@ -598,7 +652,7 @@ footer {
         width: 100%;
         background-color: var(--bg-nav);
         position: absolute;
-        top: 64px;
+        top: var(--nav-height);
         left: 0;
         padding: 0;
         max-height: 0;
@@ -606,6 +660,8 @@ footer {
         opacity: 0;
         pointer-events: none;
         transition: max-height 0.4s ease, opacity 0.4s ease;
+        justify-content: center;
+        padding-right: 0;
     }
 
     nav a {
@@ -620,5 +676,23 @@ footer {
         opacity: 1;
         padding: 1rem 0;
         pointer-events: auto;
+    }
+}
+
+/* Mobile pequeno */
+@media (max-width: 500px) {
+    .carousel-item {
+        max-width: 100vw;
+    }
+
+    .carousel-item img {
+        max-height: 120px;
+    }
+
+    .secao-biblioteca,
+    .secao-livros,
+    .secao-unidades {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
 }

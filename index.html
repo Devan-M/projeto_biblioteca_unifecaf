@@ -19,15 +19,11 @@
 
   <!-- NAVBAR -->
   <header>
-    <div class="container-max-width" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
-      <div class="logo">
+    <div class="container-max-width nav-bar" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+      <div class="nav-logo">
         <img src="images/unifecaf_logo.png" alt="Logo da Biblioteca">
       </div>
-
-      <!-- CHECKBOX CONTROLE -->
       <input type="checkbox" id="menu-toggle">
-
-      <!-- HAMBURGER SVG -->
       <label for="menu-toggle" class="hamburger" aria-hidden="true">
         <span class="sr-only">Abrir menu</span>
         <svg viewBox="0 0 32 32" aria-hidden="true">
@@ -37,78 +33,77 @@
           <path class="line" d="M7 16 27 16"></path>
         </svg>
       </label>
-
       <nav id="site-navigation" aria-label="Menu principal">
-        <a href="#sobre-biblioteca" class="active">Biblioteca</a>
-        <a href="#nossos-livros">Livros</a>
-        <a href="#unidades">Unidades</a>
-        <a href="#contatos">Contatos</a>
+        <a href="#secao-biblioteca">Biblioteca</a>
+        <a href="#secao-livros">Livros</a>
+        <a href="#secao-unidades">Unidades</a>
+        <a href="#secao-contato">Contatos</a>
       </nav>
     </div>
   </header>
 
-  <!-- BANNER -->
-  <main class="hero" aria-label="Banner principal">
+  <!-- BANNER PRINCIPAL -->
+  <main class="banner-principal" aria-label="Banner principal">
     <div class="container-max-width">
       <img src="images/banner.jpg" alt="Imagem de capa da biblioteca">
     </div>
   </main>
 
-  <!-- SOBRE NOSSA BIBLIOTECA -->
-  <section class="about-library" aria-labelledby="sobre-biblioteca">
-    <h2 id="sobre-biblioteca" class="container-max-width">Nossa biblioteca</h2>
-    <div class="about-library__content container-max-width">
-      <div class="about-library__item about-library__item--text">
+  <!-- SEÇÃO BIBLIOTECA -->
+  <section class="secao-biblioteca" aria-labelledby="secao-biblioteca">
+    <h2 id="secao-biblioteca" class="container-max-width">Nossa biblioteca</h2>
+    <div class="biblioteca-conteudo container-max-width">
+      <div class="biblioteca-texto">
         <p>A Biblioteca Digital da UNIFECAF disponibiliza um acervo amplo e diversificado, composto por livros, artigos
           e diversos recursos digitais, cuidadosamente selecionados para apoiar o aprendizado, a pesquisa e o
           desenvolvimento acadêmico de estudantes, professores e de toda a comunidade universitária.</p>
       </div>
-      <div class="about-library__item about-library__item--image">
+      <div class="biblioteca-imagem">
         <img src="images/bib6.jpg" alt="Imagem da biblioteca">
       </div>
-      <div class="about-library__item about-library__item--text">
+      <div class="biblioteca-texto">
         <p>Nosso espaço reúne um acervo abrangente de obras acadêmicas e literárias, além de materiais de referência
           constantemente atualizados, atendendo às diversas áreas do conhecimento. Buscamos oferecer conteúdos
           relevantes que apoiem tanto o desenvolvimento acadêmico quanto o aprimoramento pessoal.</p>
       </div>
     </div>
-    <div class="image-carousel" aria-label="Carrossel de imagens">
+    <div class="biblioteca-carousel" aria-label="Carrossel de imagens">
       <div class="carousel container-max-width">
         <div class="carousel-track">
-          <article class="carousel__item">
+          <article class="carousel-item">
             <img src="images/bib1.jpg" alt="Interior da biblioteca">
           </article>
-          <article class="carousel__item">
+          <article class="carousel-item">
             <img src="images/bib2.jpg" alt="Estantes de livros da biblioteca">
           </article>
-          <article class="carousel__item">
+          <article class="carousel-item">
             <img src="images/bib3.jpg" alt="Área de estudo da biblioteca">
           </article>
-          <article class="carousel__item">
+          <article class="carousel-item">
             <img src="images/bib4.jpg" alt="Área de estudo da biblioteca">
           </article>
-          <article class="carousel__item">
+          <article class="carousel-item">
             <img src="images/bib5.jpg" alt="Interior da biblioteca">
           </article>
-          <article class="carousel__item">
+          <article class="carousel-item">
             <img src="images/bib6.jpg" alt="Estantes de livros da biblioteca">
           </article>
-          <article class="carousel__item">
+          <article class="carousel-item">
             <img src="images/bib1.jpg" alt="Interior da biblioteca">
           </article>
-          <article class="carousel__item">
+          <article class="carousel-item">
             <img src="images/bib2.jpg" alt="Estantes de livros da biblioteca">
           </article>
-          <article class="carousel__item">
+          <article class="carousel-item">
             <img src="images/bib3.jpg" alt="Área de estudo da biblioteca">
           </article>
-          <article class="carousel__item">
+          <article class="carousel-item">
             <img src="images/bib4.jpg" alt="Área de estudo da biblioteca">
           </article>
-          <article class="carousel__item">
+          <article class="carousel-item">
             <img src="images/bib5.jpg" alt="Interior da biblioteca">
           </article>
-          <article class="carousel__item">
+          <article class="carousel-item">
             <img src="images/bib6.jpg" alt="Estantes de livros da biblioteca">
           </article>
         </div>
@@ -117,87 +112,87 @@
   </section>
 
   <!-- BANNER SECUNDÁRIO -->
-  <section class="secondary-banner" aria-label="Banner secundário">
+  <section class="banner-secundario" aria-label="Banner secundário">
     <div class="container-max-width">
-      <img src="images/banner.jpg" alt="Banner secundário da biblioteca">
+      <img src="images/bib6.jpg" alt="Banner secundário da biblioteca">
     </div>
   </section>
 
-  <!-- NOSSOS LIVROS -->
-  <section class="books-section" aria-labelledby="nossos-livros">
-    <div class="books-section__header container-max-width">
-      <h2 id="nossos-livros">Nossos livros</h2>
+  <!-- SEÇÃO LIVROS -->
+  <section class="secao-livros" aria-labelledby="secao-livros">
+    <div class="livros-header container-max-width">
+      <h2 id="secao-livros">Nossos livros</h2>
     </div>
-    <div class="books-grid container-max-width">
-      <article class="book-card">
-        <h3>Nome do Livro 1</h3>
+    <div class="livros-grid container-max-width">
+      <article class="livro-card">
+        <h3>Java como programar</h3>
         <img src="images/book1.jpg" alt="Capa do livro 1">
         <p>Uma obra essencial para entender os principais conceitos e aplicar o conhecimento de forma prática.</p>
-        <a href="#" class="book-card__button">Saiba mais</a>
+        <a href="#" class="livro-card-botao">Saiba mais</a>
       </article>
-      <article class="book-card">
-        <h3>Nome do Livro 2</h3>
+      <article class="livro-card">
+        <h3>C++ como programar</h3>
         <img src="images/book2.jpg" alt="Capa do livro 2">
         <p>Um guia completo com exemplos atuais e explicações claras para apoiar sua pesquisa.</p>
-        <a href="#" class="book-card__button">Saiba mais</a>
+        <a href="#" class="livro-card-botao">Saiba mais</a>
       </article>
-      <article class="book-card">
-        <h3>Nome do Livro 3</h3>
+      <article class="livro-card">
+        <h3>Começando a progrmar em python para leigos</h3>
         <img src="images/book3.jpg" alt="Capa do livro 3">
         <p>Conteúdo focado no desenvolvimento acadêmico e no estudo de práticas de leitura aprofundada.</p>
-        <a href="#" class="book-card__button">Saiba mais</a>
+        <a href="#" class="livro-card-botao">Saiba mais</a>
       </article>
-      <article class="book-card">
-        <h3>Nome do Livro 4</h3>
+      <article class="livro-card">
+        <h3>C# como programar</h3>
         <img src="images/book4.jpg" alt="Capa do livro 4">
         <p>Um título recomendado para quem busca referências sólidas e autoras de destaque.</p>
-        <a href="#" class="book-card__button">Saiba mais</a>
+        <a href="#" class="livro-card-botao">Saiba mais</a>
       </article>
-      <article class="book-card">
-        <h3>Nome do Livro 5</h3>
+      <article class="livro-card">
+        <h3>Lógica de programação</h3>
         <img src="images/book5.jpg" alt="Capa do livro 5">
         <p>Texto leve e informativo que facilita o estudo e a consulta rápida de conceitos importantes.</p>
-        <a href="#" class="book-card__button">Saiba mais</a>
+        <a href="#" class="livro-card-botao">Saiba mais</a>
       </article>
-      <article class="book-card">
-        <h3>Nome do Livro 6</h3>
+      <article class="livro-card">
+        <h3>Lógica de programação de computadores</h3>
         <img src="images/book6.jpg" alt="Capa do livro 6">
         <p>Uma leitura inspiradora para estudantes e professores, com aplicação direta na prática acadêmica.</p>
-        <a href="#" class="book-card__button">Saiba mais</a>
+        <a href="#" class="livro-card-botao">Saiba mais</a>
       </article>
     </div>
   </section>
 
   <!-- UNIDADES -->
-  <section class="units-section" aria-labelledby="unidades">
-    <div class="units-section__header container-max-width">
-      <h2 id="unidades">As unidades</h2>
+  <section class="secao-unidades" aria-labelledby="secao-unidades">
+    <div class="unidades-header container-max-width">
+      <h2 id="secao-unidades">As unidades</h2>
     </div>
-    <div class="units-section__item container-max-width">
-      <div class="units-section__image">
+    <div class="unidade-item container-max-width">
+      <div class="unidade-imagem">
         <img src="images/unidade1.jpg" alt="Unidade 1">
       </div>
-      <div class="units-section__text">
+      <div class="unidade-texto">
         <h3>Unidade 1</h3>
         <p>Localizada no campus principal, a Unidade 1 oferece salas de estudo, computadores e um acervo especializado
           em obras acadêmicas.</p>
       </div>
     </div>
-    <div class="units-section__item container-max-width">
-      <div class="units-section__image">
+    <div class="unidade-item container-max-width">
+      <div class="unidade-imagem">
         <img src="images/unidade2.jpg" alt="Unidade 2">
       </div>
-      <div class="units-section__text">
+      <div class="unidade-texto">
         <h3>Unidade 2</h3>
         <p>Com atendimento estendido, esta unidade conta com recursos multimídia e espaço de pesquisa voltado para
           estudantes de pós-graduação.</p>
       </div>
     </div>
-    <div class="units-section__item container-max-width">
-      <div class="units-section__image">
+    <div class="unidade-item container-max-width">
+      <div class="unidade-imagem">
         <img src="images/unidade3.jpg" alt="Unidade 3">
       </div>
-      <div class="units-section__text">
+      <div class="unidade-texto">
         <h3>Unidade 3</h3>
         <p>Espaço moderno e acolhedor pensado para estudos em grupo, oficinas e eventos acadêmicos, com suporte técnico
           e bibliotecário.</p>
@@ -206,25 +201,64 @@
   </section>
 
   <!-- CONTATOS -->
-  <section class="contacts-section" aria-labelledby="contatos">
-    <h2 id="contatos" class="container-max-width">Contatos</h2>
-    <div class="contacts-section__inner container-max-width">
-      <div class="contacts-section__texts">
-        <p>Texto do primeiro bloco de contato. Adicione aqui o endereço, telefone, e-mail ou qualquer informação
-          relevante para os visitantes da biblioteca.</p>
-        <p>Texto do segundo bloco de contato. Horários de funcionamento, canais de atendimento ou outras informações
-          úteis para a comunidade acadêmica.</p>
+  <section class="secao-contato" aria-labelledby="secao-contato">
+    <h2 id="secao-contato" class="container-max-width">Contatos</h2>
+    <div class="contato-inner container-max-width">
+      <div class="contato-textos">
+        <p>Av. Vida Nova, 166 - Jardim Maria Rosa, Taboão da Serra - SP, CEP: 06764-045<br>
+          (11) 4210-4950</p>
+        <p>Horários de funcionamento: Segunda a Sexta, das 8h às 18h</p>
+        <h3>Nossas Redes Sociais:</h3>
+        <div class="social-card">
+          <a href="https://www.instagram.com/unifecaf/" target="_blank" rel="noopener noreferrer" class="socialContainer containerOne" aria-label="Instagram">
+            <svg class="socialSvg instagramSvg" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/school/unifecaf" target="_blank" rel="noopener noreferrer" class="socialContainer containerThree" aria-label="LinkedIn">
+            <svg class="socialSvg linkdinSvg" viewBox="0 0 448 512" aria-hidden="true">
+              <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/>
+            </svg>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=551142104950&text=Ol%C3%A1,%20tudo%20bem?" target="_blank" rel="noopener noreferrer" class="socialContainer containerFour" aria-label="WhatsApp">
+            <svg class="socialSvg whatsappSvg" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+            </svg>
+          </a>
+        </div>
       </div>
-      <div class="contacts-section__image">
-        <img src="images/contato.png" alt="Imagem de contato da biblioteca">
+      <div class="contato-imagem">
+        <img src="images/telefonista.jpg" alt="Imagem de contato da biblioteca">
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Biblioteca Digital</p>
-  </footer>
+  <footer class="footer">
+  <div class="footer-left">
+    <p>© 2026 Biblioteca Digital Unifecaf</p>
+  </div>
+
+  <div class="footer-right">
+    <p>Desenvolvido por: Devan</p>
+
+    <div class="footer-icons">
+      <!-- LinkedIn -->
+      <a href="#" target="_blank" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1 4.98 2.12 4.98 3.5zM.5 8h4v12h-4V8zm7.5 0h3.6v1.7h.1c.5-.9 1.8-1.8 3.7-1.8 4 0 4.7 2.6 4.7 6v6.1h-4v-5.4c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V20h-4V8z"/>
+        </svg>
+      </a>
+
+      <!-- WhatsApp -->
+      <a href="#" target="_blank" aria-label="WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20.5 3.5A11.8 11.8 0 0012.2 0C5.6 0 .2 5.4.2 12c0 2.1.6 4.2 1.7 6L0 24l6.2-1.6c1.7.9 3.6 1.4 5.5 1.4h.1c6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.3-8.3zM12.3 21c-1.7 0-3.4-.5-4.8-1.3l-.3-.2-3.7 1 1-3.6-.2-.3c-.9-1.5-1.4-3.2-1.4-5 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.6 2.7s2.7 4.1 2.7 6.6c0 5.2-4.2 9.4-9.3 9.4zm5.2-7.1c-.3-.2-1.6-.8-1.8-.9-.2-.1-.4-.2-.6.2s-.7.9-.8 1c-.1.1-.3.2-.6.1s-1.2-.4-2.3-1.3c-.8-.7-1.3-1.5-1.5-1.8-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6s-.6-1.5-.8-2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.9 1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.8 5.1.8.3 1.5.5 2 .6.8.1 1.5.1 2.1.1.6-.1 1.6-.6 1.8-1.2.2-.6.2-1.2.1-1.3-.1-.1-.3-.2-.6-.4z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
   <script src="script.js" defer></script>
 </body>
 </html>
